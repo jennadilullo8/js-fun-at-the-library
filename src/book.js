@@ -2,7 +2,7 @@ function createTitle(title) {
   return `The ${title}`;
 }
 
-function buildMainCharacter(name, age pronouns) {
+function buildMainCharacter(name, age, pronouns) {
   return {name, age, pronouns};
 }
 
@@ -17,8 +17,10 @@ function calculatePageCount(title) {
   return titleLength;
 }
 
-function writeBook(title) {
-  return
+function writeBook(title, mainCharacter, genre) {
+  var book = {title, mainCharacter, genre};
+  book.pageCount = calculatePageCount(title);
+  return book;
 }
 
 module.exports = {
