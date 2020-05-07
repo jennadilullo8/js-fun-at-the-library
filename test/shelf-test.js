@@ -1,16 +1,16 @@
 var assert = require("chai").assert;
 var shelfBook = require("../src/shelf.js").shelfBook;
-var unshelfBook = require("../src/shelf.js").unshelfBook;
+var unShelfBook = require("../src/shelf.js").unShelfBook;
 var listTitles = require("../src/shelf.js").listTitles;
 var searchShelf = require("../src/shelf.js").searchShelf;
 
 describe("shelf.js", function() {
   describe("shelfBook", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(shelfBook);
     });
-  
-    it.skip("should add books to a specific shelf", function() {
+
+    it("should add books to a specific shelf", function() {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -24,15 +24,15 @@ describe("shelf.js", function() {
         genre: "scifi"
       };
       var scifiShelf = [];
-  
+
       shelfBook(hyperion, scifiShelf);
       shelfBook(dune, scifiShelf);
-  
+
       assert.equal(scifiShelf[0], dune);
       assert.equal(scifiShelf[1], hyperion);
     });
-  
-    it.skip('should add another book to the shelf', function() {
+
+    it('should add another book to the shelf', function() {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -52,16 +52,16 @@ describe("shelf.js", function() {
         genre: "scifi"
       };
       var scifiShelf = [hyperion];
-  
+
       shelfBook(endersgame, scifiShelf);
       shelfBook(dune, scifiShelf);
-  
+
       assert.equal(scifiShelf[0], dune);
       assert.equal(scifiShelf[1], endersgame);
       assert.equal(scifiShelf[2], hyperion);
     });
 
-    it.skip("shelves can only hold a certain amount of books", function () {
+    it("shelves can only hold a certain amount of books", function () {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -100,11 +100,11 @@ describe("shelf.js", function() {
     });
   });
 
-  describe("unshelfBook", function() {
-    it.skip('should be a function', function() {
-      assert.isFunction(unshelfBook);
+  describe("unShelfBook", function() {
+    it('should be a function', function() {
+      assert.isFunction(unShelfBook);
     });
-  
+
     it.skip('should remove a book by name', function() {
       var hyperion = {
         title: "Hyperion",
@@ -125,9 +125,9 @@ describe("shelf.js", function() {
         genre: "scifi"
       };
       var scifiShelf = [hyperion, dune, endersgame];
-  
+
       unshelfBook("Dune", scifiShelf);
-      
+
       assert.equal(scifiShelf.length, 2);
       assert.deepEqual(scifiShelf, [hyperion, endersgame]);
     });
