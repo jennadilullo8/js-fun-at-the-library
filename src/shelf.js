@@ -20,6 +20,14 @@ function listTitles(fantasyShelf) {
     return stringOfTitles.toString();
 }
 
+function searchShelf(scifiShelf, title) {
+  for (var i = 0; i < scifiShelf.length; i++) {
+  if (scifiShelf[i].title === title) {
+      return true;
+    }
+  }
+    return false;
+}
 
 
 module.exports = {
