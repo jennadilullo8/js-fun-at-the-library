@@ -2,14 +2,8 @@ function createTitle(title) {
   return `The ${title}`;
 }
 
-var ghoulCharacter = {
-  name: 'Vassya',
-  age: 16,
-  pronouns: 'she/her'
-};
-
-function buildMainCharacter() {
-  return ghoulCharacter;
+function buildMainCharacter(name, age pronouns) {
+  return {name, age, pronouns};
 }
 
 function saveReview(string, reviews) {
