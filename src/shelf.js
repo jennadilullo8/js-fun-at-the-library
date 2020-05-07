@@ -6,9 +6,10 @@ function shelfBook(book, scifiShelf) {
 }
 
 function unShelfBook(bookString, scifiShelf) {
-for (var i = 0; i < scifiShelf.length; i++) {
-  if (scifiShelf[i].title === 'Dune')
-    scifiShelf.splice(i, 1);
+  for (var i = 0; i < scifiShelf.length; i++) {
+    if (scifiShelf[i].title === 'Dune') {
+      scifiShelf.splice(i, 1);
+    }
   }
 }
 
@@ -17,12 +18,13 @@ function listTitles(fantasyShelf) {
   var secondTitle = fantasyShelf[1].title;
   var thirdTitle = fantasyShelf[2].title;
   var stringOfTitles = `${firstTitle}, ${secondTitle}, ${thirdTitle}`;
-    return stringOfTitles.toString();
+
+  return stringOfTitles.toString();
 }
 
 function searchShelf(scifiShelf, title) {
   for (var i = 0; i < scifiShelf.length; i++) {
-  if (scifiShelf[i].title === title) {
+    if (scifiShelf[i].title === title) {
       return true;
     }
   }
