@@ -6,25 +6,25 @@ var checkoutBook = require('../src/library.js').checkoutBook;
 var searchShelf = require('../src/shelf.js').searchShelf;
 
 describe('Librarian (class)', function() {
-  it.skip('should instantiate a librarian object', function() {
+  it('should instantiate a librarian object', function() {
     var casey = new Librarian("Casey");
 
     assert.instanceOf(casey, Librarian);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var librarian = new Librarian("Casey");
 
     assert.equal(librarian.name, "Casey");
   });
 
-  it.skip('should be able to have a different name', function() {
+  it('should be able to have a different name', function() {
     var librarian = new Librarian("Scott");
 
     assert.equal(librarian.name, "Scott");
   });
 
-  it.skip('should work at a library', function() {
+  it('should work at a library', function() {
     var library = createLibrary("Denver Public Library");
     var librarian = new Librarian("Scott", library);
 
@@ -66,15 +66,12 @@ describe('Librarian (class)', function() {
     assert.equal(bookConfirmation, "Yes, we have The Fifth Season");
   });
 
-  it.skip('should say if requested book is not found', function() {
+  it.skip("should say if requested book is not found", function() {
     var library = createLibrary("Aurora Public Library");
     var librarian = new Librarian("Casey", library);
-    var book = { title: 'The Fifth Season', genre: 'fantasy' }
-
-    librarian.library.addBook(book);
-
+    var book = { title: "The Fifth Season", genre: "fantasy" }
+    addBook(librarian.library, book);
     var bookConfirmation = librarian.findBook("Five Brief Lessons in Physics");
-
     assert.equal(bookConfirmation, "Sorry, we do not have Five Brief Lessons in Physics");
   });
 
