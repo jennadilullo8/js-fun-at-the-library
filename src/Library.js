@@ -22,13 +22,11 @@ function addBook(libraryObj, bookTitle) {
 
 
 function checkoutBook(libraryObj, bookTitleString) {
-  if (libraryObj.shelves.fiction[0].title === bookTitleString) {
-      libraryObj.shelves.fiction.pop(bookTitleString);
-      return `You have now checked out ${bookTitleString} from the Denver Public Library`;
-      console.log(libraryObj.shelves.fiction[0].title);
-  } else if (libraryObj.shelves.title != bookTitleString){
-    //if the booktitle doesn't matche the booktitlestring then return
-    return `Sorry, there are currently no copies of the ${bookTitleString} available at the Denver Public Library`;
+  if (libraryObj.shelves.fiction[0] === undefined) {
+    return `Sorry, there are currently no copies of ${bookTitleString} available at the Denver Public Library`;
+  } else if (libraryObj.shelves.fiction[0].title === bookTitleString){
+    libraryObj.shelves.fiction.pop(bookTitleString);
+    return `You have now checked out ${bookTitleString} from the Denver Public Library`;
   }
 }
 
