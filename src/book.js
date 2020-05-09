@@ -13,8 +13,7 @@ function saveReview(string, reviews) {
 }
 
 function calculatePageCount(title) {
-  var titleLength = title.length * 20;
-  return titleLength;
+   return title.length * 20;
 }
 
 function writeBook(title, mainCharacter, genre) {
