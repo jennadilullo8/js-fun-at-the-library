@@ -8,19 +8,18 @@ function buildMainCharacter(name, age, pronouns) {
 }
 
 function saveReview(string, reviews) {
-  if (!reviews.include(string)) {
+  if (!reviews.includes(string)) {
       reviews.push(string);
   }
 }
 
-function calculatePageCount(title) {
-   return title.length * 20;
+function calculatePageCount(bookTitle) {
+  var pageCount = bookTitle.length * 20;
+  return pageCount;
 }
 
 function writeBook(title, mainCharacter, genre) {
-  var book = {title, mainCharacter, genre};
-  book.pageCount = calculatePageCount(title);
-  return book;
+
 }
 
 function editBook(book) {
