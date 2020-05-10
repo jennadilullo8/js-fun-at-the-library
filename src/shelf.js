@@ -7,7 +7,7 @@ function shelfBook(book, scifiShelf) {
 
 function unShelfBook(bookString, scifiShelf) {
   for (var i = 0; i < scifiShelf.length; i++) {
-    if (scifiShelf[i].title === 'Dune') {
+    if (scifiShelf[i].title === bookString) {
       scifiShelf.splice(i, 1);
     }
   }
