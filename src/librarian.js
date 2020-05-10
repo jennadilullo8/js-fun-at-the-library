@@ -24,7 +24,8 @@ class Librarian {
   calculateLateFee(number) {
     var fee = number * 0.25;
     var roundedNumber = Math.ceil(fee);
-      return roundedNumber;
+    
+    return roundedNumber;
   }
 }
 
