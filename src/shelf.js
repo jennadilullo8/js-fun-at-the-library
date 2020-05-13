@@ -1,14 +1,14 @@
-function shelfBook(book, scifiShelf) {
-  scifiShelf.splice(0, 0, book);
-  if (scifiShelf.length === 4) {
-    scifiShelf.shift(book);
+function shelfBook(book, shelf) {
+  shelf.splice(0, 0, book);
+  if (shelf.length === 4) {
+    shelf.shift(book);
   }
 }
 
-function unShelfBook(bookString, scifiShelf) {
-  for (var i = 0; i < scifiShelf.length; i++) {
-    if (scifiShelf[i].title === bookString) {
-        scifiShelf.splice(i, 1);
+function unShelfBook(bookString, shelf) {
+  for (var i = 0; i < shelf.length; i++) {
+    if (shelf[i].title === bookString) {
+        shelf.splice(i, 1);
     }
   }
 }
