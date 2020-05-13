@@ -12,6 +12,7 @@ function createLibrary(name) {
 
 function addBook(libraryObj, bookTitle) {
   libraryObj.shelves[bookTitle.genre].push(bookTitle);
+  
   // if (bookTitle.genre === 'fantasy') {
   //   libraryObj.shelves.fantasy.push(bookTitle);
   // } else if (bookTitle.genre === 'nonFiction') {
